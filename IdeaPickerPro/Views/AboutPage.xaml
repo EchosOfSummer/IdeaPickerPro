@@ -4,6 +4,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="IdeaPickerPro.Views.AboutPage">
     <ContentPage.Content>
-        
+        <VerticalStackLayout Padding="20" Spacing="8"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center">
+            <Label Text="Author: Neebin Buswa" HorizontalTextAlignment="Center"/>
+            <Label Text="App Name: IdeaPickerPro" FontSize="Large" HorizontalTextAlignment="Center" />
+            <Label Text="Version #0.1.1" HorizontalTextAlignment="Center" />
+        </VerticalStackLayout>
     </ContentPage.Content>
 </ContentPage>

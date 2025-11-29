@@ -12,4 +12,10 @@ public partial class MainPage : ContentPage
     {
         InitializeComponent();
     }
+
+    private async void About(object sender, EventArgs e)
+    {
+        if (Shell.Current.CurrentPage is AboutPage) return;
+        await Shell.Current.GoToAsync("AboutPage");
+    }
 }
