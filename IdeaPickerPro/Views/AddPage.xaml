@@ -3,31 +3,47 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="IdeaPickerPro.Views.AddPage">
-    <Grid RowDefinitions="*,Auto" Padding="16">
-        <ScrollView Grid.Row="0">
-            <VerticalStackLayout Spacing="12"
-                                 HorizontalOptions="Center"
-                                 VerticalOptions="Center">
-                <Label Text="Enter a Number"
-                       HorizontalOptions="Center" />
-                <Entry x:Name="NEntryNum" 
-                       Placeholder="Number" 
-                       Keyboard="Numeric"
-                       HorizontalOptions="Center"
-                       WidthRequest="260" />
-                
-                <Label Text="Results: " FontAttributes="Bold"
-                       HorizontalTextAlignment="Center" />
-                <Label x:Name="RResult" HorizontalTextAlignment="Center" />
-                
-                <Label x:Name="ErrorR" TextColor="Red" IsVisible="False"
-                       HorizontalTextAlignment="Center" />
+    <Grid RowDefinitions="Auto,*,Auto" Padding="16" RowSpacing="20">
+            <VerticalStackLayout Grid.Row="0" Spacing="5">
+                <Label Text="Add Your Idea"
+                       FontSize="28"
+                       FontAttributes="Bold"
+                       TextColor="#333" />
+                <Label Text="What's On Your Mind?"
+                       FontSize="14"
+                       TextColor="#666" />
             </VerticalStackLayout>
-        </ScrollView>
-        <Button Grid.Row="1"
-                Text="Convert to Roman" 
-                
-                HorizontalOptions="Center"/>
-
+        
+        <!-- Input Area -->
+        <Frame Grid.Row="1"
+               BackgroundColor="White"
+               CornerRadius="12"
+               Padding="0"
+               HasShadow="True">
+            <Editor x:Name="enterIdean"
+                    Placeholder="Type your ideas here... haha"
+                    PlaceholderColor="#999"
+                    FontSize="16"
+                    AutoSize="TextChanges"
+                    MinimumHeightRequest="200"
+                    Margin="15"/>
+        </Frame>
+        <!-- Action stuff -->
+        <VerticalStackLayout Grid.Row="2" Spacing="10">
+            <Button Text="Save Idea"
+                    FontSize="18"
+                    BackgroundColor="#4CAF50"
+                    TextColor="White"
+                    CornerRadius="12"
+                    HeightRequest="55" />
+            <Button Text="Clear"
+                    FontSize="16"
+                    BackgroundColor="Transparent"
+                    TextColor="#666"
+                    BorderColor="#CCC"
+                    BorderWidth="1"
+                    CornerRadius="12"
+                    HeightRequest="45" />
+        </VerticalStackLayout>
     </Grid>
 </ContentPage>
