@@ -23,7 +23,7 @@
                      HorizontalOptions="Center"/>
         
               <Button Text="Pick Random Idea"
-                
+                      Clicked="btnRandomIdea"
                       HeightRequest="60"
                       FontSize="18"
                       BackgroundColor="#FF9800"

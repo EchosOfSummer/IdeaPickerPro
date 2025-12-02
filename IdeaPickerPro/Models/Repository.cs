@@ -23,4 +23,9 @@ public class Repository
     {
         _database.Insert(idea);
     }
+
+    public void DeleteIdea(int id)
+    {
+        _database.Delete<Idea>(id);
+    }
 }

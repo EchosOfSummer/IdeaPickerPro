@@ -8,7 +8,7 @@
     <ScrollView>
         <VerticalStackLayout Padding="20" Spacing="20">
             <!-- Header -->
-            <Label Text="Add Your Add!"
+            <Label Text="Add Your Idea!"
                    FontSize="28"
                    FontAttributes="Bold"
                    HorizontalOptions="Center" />
@@ -38,7 +38,8 @@
                     BackgroundColor="#4CAF50"
                     TextColor="White"
                     CornerRadius="12"
-                    HeightRequest="55"/>
+                    HeightRequest="55"
+                    Clicked="BtnSave_OnClicked"/>
             
             <Button Text="Clear"
                     x:Name="btnClear"
@@ -48,7 +49,8 @@
                     BorderColor="#CCC"
                     BorderWidth="1"
                     CornerRadius="12"
-                    HeightRequest="45"/>
+                    HeightRequest="45"
+                    Clicked="BtnClear_OnClicked"/>
         </VerticalStackLayout>
     </ScrollView>
     

@@ -29,10 +29,10 @@
         <!-- Ideas ListView -->
         <ListView x:Name="lstIdeas"
                   ItemsSource="{Binding}"
-                  ItemSelected="LstIdeas_Stuff">
+                  ItemSelected="LstIdeas_List">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextCell Text="{Binding}" 
+                    <TextCell Text="{Binding Name}" 
                               Detail="{Binding ID, StringFormat='Idea #{0}'}"/>
                 </DataTemplate>
             </ListView.ItemTemplate>

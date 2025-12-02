@@ -3,19 +3,38 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using IdeaPickerPro.Models;
 
 namespace IdeaPickerPro.Views;
 
 public partial class MainPage : ContentPage
 {
+    private readonly Repository _repository;
     public MainPage()
     {
         InitializeComponent();
+        _repository = new Repository();
     }
 
     private async void About(object sender, EventArgs e)
     {
         if (Shell.Current.CurrentPage is AboutPage) return;
         await Shell.Current.GoToAsync("AboutPage");
+    }
+
+    private void btnRandomIdea(object sender, EventArgs e)
+    {
+        var ideas = _repository.GetIdeas();
+
+        if (ideas.Count == 0)
+        {
+            lblRandIdea.Text = "Nod ideas yet! Add some first";
+            return;
+        }
+
+        var random = new Random();
+        var randomIdea = ideas[random.Next(ideas.Count)];
+
+        lblRandIdea.Text = $"{randomIdea._Text}";
     }
 }
