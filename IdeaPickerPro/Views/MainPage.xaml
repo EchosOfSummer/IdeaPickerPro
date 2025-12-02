@@ -11,54 +11,29 @@
                      Order="Primary"
                      Priority="0"/>
     </ContentPage.ToolbarItems>
-    <Grid RowDefinitions="*,*,*" Padding="30">
-        <!-- Title section -->
-        <VerticalStackLayout Grid.Row="0" 
-                             VerticalOptions="End"
-                             HorizontalOptions="Center"
-                             Spacing="10">
-            <Label Text="????"
-                   FontSize="64"
-                   HorizontalTextAlignment="Center" />
-            <Label Text="IdeaPickerPro"
-                   FontSize="32"
-                   FontAttributes="Bold"
-                   HorizontalTextAlignment="Center"
-                   TextColor="#333"/>
-            <Label Text="Keep track of your brilliant ideas" 
-                   FontSize="16"
-                   TextColor="#666"
-                   HorizontalTextAlignment="Center"/>
-        </VerticalStackLayout>
+       
+       <VerticalStackLayout Padding="20" Spacing="20" VerticalOptions="Center">
         
-        <!-- Nav buttons -->
-        <VerticalStackLayout Grid.Row="1"
-                             VerticalOptions="Center"
-                             HorizontalOptions="Center"
-                             Spacing="15"
-                             WidthRequest="280">
-            
-           <Button Text="+ Add New Idea"
-                   FontSize="18"
-                   BackgroundColor="#4CAF50"
-                   TextColor="White"
-                   CornerRadius="20"
-                   HeightRequest="60" />
-           <Button Text="View All Ideas"
-                   FontSize="18"
-                   BackgroundColor="#2196F3"
-                   TextColor="White"
-                   CornerRadius="12"
-                   HeightRequest="60" />
-            
-        </VerticalStackLayout>
+              <Label Text="Welcome to Idea Picker Pro!"
+                     FontSize="24"
+                     FontAttributes="Bold"
+                     HorizontalOptions="Center"/>
+              <Label Text="Where do you want to go?"
+                     FontSize="18"
+                     HorizontalOptions="Center"/>
         
-        <!-- ???Footer -->
-        <Label Grid.Row="2"
-               Text="v0.1.1"
-               FontSize="12"
-               TextColor="#999"
-               VerticalOptions="End"
-               HorizontalOptions="Center"/>
-    </Grid>
+              <Button Text="Pick Random Idea"
+                
+                      HeightRequest="60"
+                      FontSize="18"
+                      BackgroundColor="#FF9800"
+                      CornerRadius="12"/>
+        
+              <Label x:Name="lblRandIdea"
+                     Text=""
+                     FontSize="20"
+                     FontAttributes="Bold"
+                     HorizontalOptions="Center"
+                     TextColor="#9C27BB"/>
+       </VerticalStackLayout>
 </ContentPage>

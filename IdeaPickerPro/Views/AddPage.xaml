@@ -2,48 +2,54 @@
 
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="IdeaPickerPro.Views.AddPage">
-    <Grid RowDefinitions="Auto,*,Auto" Padding="16" RowSpacing="20">
-            <VerticalStackLayout Grid.Row="0" Spacing="5">
-                <Label Text="Add Your Idea"
-                       FontSize="28"
-                       FontAttributes="Bold"
-                       TextColor="#333" />
-                <Label Text="What's On Your Mind?"
-                       FontSize="14"
-                       TextColor="#666" />
-            </VerticalStackLayout>
-        
-        <!-- Input Area -->
-        <Frame Grid.Row="1"
-               BackgroundColor="White"
-               CornerRadius="12"
-               Padding="0"
-               HasShadow="True">
-            <Editor x:Name="enterIdean"
-                    Placeholder="Type your ideas here... haha"
-                    PlaceholderColor="#999"
-                    FontSize="16"
-                    AutoSize="TextChanges"
-                    MinimumHeightRequest="200"
-                    Margin="15"/>
-        </Frame>
-        <!-- Action stuff -->
-        <VerticalStackLayout Grid.Row="2" Spacing="10">
+             x:Class="IdeaPickerPro.Views.AddPage"
+             Title="Add Idea">
+   
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+            <!-- Header -->
+            <Label Text="Add Your Add!"
+                   FontSize="28"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+            
+            <Label Text="What brilliant thought do you have?"
+                   FontSize="14"
+                   TextColor="Gray"
+                   HorizontalOptions="Center" />
+            
+            <!-- Input Area -->
+            <Frame BackgroundColor="White"
+                   CornerRadius="12"
+                   Padding="15"
+                   HasShadow="True">
+                <Grid>
+                    <Entry x:Name="txtIdea"
+                           Placeholder="Type your idea here..."
+                           PlaceholderColor="#999"
+                           FontSize="16" />
+                </Grid>
+            </Frame>
+            
+            <!-- Action Buttons -->
             <Button Text="Save Idea"
-                    FontSize="18"
+                    x:Name="btnSave"
+                    FontSize="16"
                     BackgroundColor="#4CAF50"
                     TextColor="White"
                     CornerRadius="12"
-                    HeightRequest="55" />
+                    HeightRequest="55"/>
+            
             <Button Text="Clear"
+                    x:Name="btnClear"
                     FontSize="16"
                     BackgroundColor="Transparent"
                     TextColor="#666"
                     BorderColor="#CCC"
                     BorderWidth="1"
                     CornerRadius="12"
-                    HeightRequest="45" />
+                    HeightRequest="45"/>
         </VerticalStackLayout>
-    </Grid>
+    </ScrollView>
+    
 </ContentPage>

@@ -3,30 +3,48 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="IdeaPickerPro.Views.IdeasPage"
-             Title="My Ideas..."
-             BackgroundColor="#F5F5F5 ">
-    <Grid RowDefinitions="Auto,*,Auto" Padding="20" RowSpacing="15">
-           <!-- header -->>
-            <VerticalStackLayout Grid.Row="0" Spacing="5">
-                <Label Text="My Ideas"
-                       FontSize="28"
-                       FontAttributes="Bold"
-                       TextColor="#333"/>
-                <Label>
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <Span Text="All Your Brilliant Thoughts!!"
-                                  FontSize="14"
-                                  TextColor="#666"/>
-                            <Span Text="haha..."
-                                  FontSize="10"
-                                  TextColor="#999"/>
-                        </FormattedString>
-                    </Label.FormattedText>
-                </Label>
-            </VerticalStackLayout>
-        <Button Grid.Row="1"
-                Text="Convert to Number"
-                HorizontalOptions="Center" />
-    </Grid>
+             Title="My Ideas">
+    
+    <VerticalStackLayout Padding="20" Spacing="20">
+        
+        <!-- header -->
+        <Label Text="My Ideas!"
+               FontSize="28"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+        
+        <Label HorizontalOptions="Center">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="All your brilliant thoughts"
+                          FontSize="14"
+                          TextColor="Gray"/>
+                    <Span Text="Haha"
+                          FontSize="10"
+                          TextColor="LightGray"/>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        
+        <!-- Ideas ListView -->
+        <ListView x:Name="lstIdeas"
+                  ItemsSource="{Binding}"
+                  ItemSelected="LstIdeas_Stuff">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding}" 
+                              Detail="{Binding ID, StringFormat='Idea #{0}'}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
+        <!-- Delete Button -->
+        <Button x:Name="btnDelete" 
+                Text="Delete Selected Idea"
+                BackgroundColor="Red"
+                TextColor="White"
+                CornerRadius="12"
+                HeightRequest="50"
+                Clicked="BtnDelete_OnClicked"/>
+    </VerticalStackLayout>
 </ContentPage>

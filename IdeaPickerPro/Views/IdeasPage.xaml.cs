@@ -19,4 +19,15 @@ public partial class IdeasPage : ContentPage
             await Shell.Current.GoToAsync("AboutPage");
         };
     }
+
+
+    private void LstIdeas_Stuff(object sender, SelectedItemChangedEventArgs e)
+    {
+        throw new NotImplementedException();
+    }
+
+    private void BtnDelete_OnClicked(object sender, EventArgs e)
+    {
+        throw new NotImplementedException();
+    }
 }
