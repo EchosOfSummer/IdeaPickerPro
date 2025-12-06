@@ -2,14 +2,59 @@
 
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="IdeaPickerPro.Views.AboutPage">
-    <ContentPage.Content>
-        <VerticalStackLayout Padding="20" Spacing="8"
-                             HorizontalOptions="Center"
-                             VerticalOptions="Center">
-            <Label Text="Author: Neebin Buswa" HorizontalTextAlignment="Center"/>
-            <Label Text="App Name: IdeaPickerPro" FontSize="Large" HorizontalTextAlignment="Center" />
-            <Label Text="Version #0.1.1" HorizontalTextAlignment="Center" />
-        </VerticalStackLayout>
-    </ContentPage.Content>
+             x:Class="IdeaPickerPro.Views.AboutPage"
+             Title="About">
+    
+    <Grid>
+        <!-- Base  background -->
+        <BoxView BackgroundColor="#1a1a2e" />
+        <!-- Overlay for glitch effect -->
+        <BoxView x:Name="Layer1" BackgroundColor="#ff00fe" Opacity="0" />
+        <BoxView x:Name="Layer2" BackgroundColor="#8e2de2" Opacity="0" />
+        <BoxView x:Name="Layer3" BackgroundColor="#4a00e0" Opacity="0" />
+        <BoxView x:Name="Layer4" BackgroundColor="#00d2ff" Opacity="0" />
+        
+        <Grid RowDefinitions="Auto,*">
+            <!-- Header with rounded corners -->
+            <Frame Grid.Row="0"
+                   Style="{StaticResource PageHeaderStyle}"
+                   HeightRequest="120">
+                <Grid Padding="20,40,20,20">
+                    <Label Text="About"
+                           FontSize="24"
+                           FontAttributes="Bold"
+                           TextColor="PaleGreen"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"/>
+                </Grid>
+            </Frame>
+            
+            <!-- Content box with infon -->
+            <Frame Grid.Row="1"
+                   Style="{StaticResource ContentBoxStyle}">
+                <VerticalStackLayout Spacing="15" VerticalOptions="Center">
+                    <Label Text="Author: Neebin Buswa"
+                           FontSize="18"
+                           HorizontalTextAlignment="Center" />
+                    <Label Text="App: IdeaPickerPro"
+                           FontSize="24"
+                           FontAttributes="Bold"
+                           HorizontalTextAlignment="Center" />
+                    <Label Text="Version #0.1.5"
+                           FontSize="16"
+                           HorizontalTextAlignment="Center"/>
+                </VerticalStackLayout>
+            </Frame>
+        </Grid>
+    </Grid>
+    
+    <!-- <ContentPage.Content> -->
+    <!--     <VerticalStackLayout Padding="20" Spacing="8" -->
+    <!--                          HorizontalOptions="Center" -->
+    <!--                          VerticalOptions="Center"> -->
+    <!--         <Label Text="Author: Neebin Buswa" HorizontalTextAlignment="Center"/> -->
+    <!--         <Label Text="App Name: IdeaPickerPro" FontSize="Large" HorizontalTextAlignment="Center" /> -->
+    <!--         <Label Text="Version #0.1.1" HorizontalTextAlignment="Center" /> -->
+    <!--     </VerticalStackLayout> -->
+    <!-- </ContentPage.Content> -->
 </ContentPage>

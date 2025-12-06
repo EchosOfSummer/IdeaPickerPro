@@ -5,46 +5,134 @@
              x:Class="IdeaPickerPro.Views.IdeasPage"
              Title="My Ideas">
     
-    <VerticalStackLayout Padding="20" Spacing="20">
+    <Grid>
+        <BoxView BackgroundColor="#1a1a2e" />
+        <!-- Overlay for glitch effect -->
+        <BoxView x:Name="Layer1" BackgroundColor="#ff00fe" Opacity="0" />
+        <BoxView x:Name="Layer2" BackgroundColor="#8e2de2" Opacity="0" />
+        <BoxView x:Name="Layer3" BackgroundColor="#4a00e0" Opacity="0" />
+        <BoxView x:Name="Layer4" BackgroundColor="#00d2ff" Opacity="0" />
         
-        <!-- header -->
-        <Label Text="My Ideas!"
-               FontSize="28"
-               FontAttributes="Bold"
-               HorizontalOptions="Center" />
-        
-        <Label HorizontalOptions="Center">
-            <Label.FormattedText>
-                <FormattedString>
-                    <Span Text="All your brilliant thoughts"
-                          FontSize="14"
-                          TextColor="Gray"/>
-                    <Span Text="Haha"
-                          FontSize="10"
-                          TextColor="LightGray"/>
-                </FormattedString>
-            </Label.FormattedText>
-        </Label>
-        
-        <!-- Ideas ListView -->
-        <ListView x:Name="lstIdeas"
-                  ItemsSource="{Binding}"
-                  ItemSelected="LstIdeas_List">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <TextCell Text="{Binding Name}" 
-                              Detail="{Binding ID, StringFormat='Idea #{0}'}"/>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-        
-        <!-- Delete Button -->
-        <Button x:Name="btnDelete" 
-                Text="Delete Selected Idea"
-                BackgroundColor="Red"
-                TextColor="White"
-                CornerRadius="12"
-                HeightRequest="50"
-                Clicked="BtnDelete_OnClicked"/>
-    </VerticalStackLayout>
+        <Grid RowDefinitions="Auto,*">
+           <!-- Header with rounded corners -->
+           <Frame Grid.Row="0"
+                  Style="{StaticResource PageHeaderStyle}"
+                  HeightRequest="120">
+               <Grid Padding="20,40,20,20">
+                   <Label Text="All Ideas"
+                          FontSize="24"
+                          FontAttributes="Bold"
+                          TextColor="Pink"
+                          HorizontalOptions="Center"
+                          VerticalOptions="Center"/>
+               </Grid>
+           </Frame>
+            
+           <!-- Content box with infon -->
+           <Frame Grid.Row="1"
+                  Style="{StaticResource ContentBoxStyle}"
+                  Padding="10">
+               <Grid>
+                   <CollectionView x:Name="IdeasCollectionView"
+                                   BackgroundColor="Transparent">
+                       <CollectionView.ItemTemplate>
+                           <DataTemplate>
+                               <SwipeView>
+                                   <SwipeView.RightItems>
+                                       <SwipeItem>
+                                           <SwipeItem Text="Delete"
+                                                      BackgroundColor="Red"
+                                                      Invoked="BtnDelete_OnClicked"/>
+                                       </SwipeItem>
+                                   </SwipeView.RightItems>
+                                   
+                                   <Frame Padding="15"
+                                          Margin="5"
+                                          BackgroundColor="White"
+                                          CornerRadius="10"
+                                          HasShadow="True">
+                                       <Grid ColumnDefinitions="*,Auto">
+                                           <Label Grid.Column="0" 
+                                                  Text="{Binding _Text}"
+                                                  FontSize="16"
+                                                  TextColor="DimGray"
+                                                  VerticalOptions="Center" />
+                                           <Label Grid.Column="1" 
+                                                  Text="???"
+                                                  FontSize="20"
+                                                  VerticalOptions="Center" />
+                                       </Grid>
+                                   </Frame>
+                               </SwipeView>
+                           </DataTemplate>
+                       </CollectionView.ItemTemplate>
+                       
+                   </CollectionView>
+                   
+                   <!-- empty -->
+                   <VerticalStackLayout x:Name="Empty"
+                                        VerticalOptions="Center"
+                                        HorizontalOptions="Center"
+                                        IsVisible="True">
+                       <Label Text="????"
+                              FontSize="50"
+                              HorizontalOptions="Center"
+                              Opacity="0.3" />
+                       <Label Text="Nothing"
+                              FontSize="18"
+                              FontAttributes="Bold"
+                              HorizontalOptions="Center"
+                              Margin="0,10,0,5" />
+                       <Label Text="Add Some Ideas"
+                              FontSize="14"
+                              TextColor="Goldenrod"
+                              HorizontalOptions="Center" />
+                   </VerticalStackLayout>
+               </Grid>
+           </Frame>
+       </Grid>
+    </Grid>
+    
+    <!-- <VerticalStackLayout Padding="20" Spacing="20"> -->
+    <!--      -->
+    <!--     ~1~ header @1@ -->
+    <!--     <Label Text="My Ideas!" -->
+    <!--            FontSize="28" -->
+    <!--            FontAttributes="Bold" -->
+    <!--            HorizontalOptions="Center" /> -->
+    <!--      -->
+    <!--     <Label HorizontalOptions="Center"> -->
+    <!--         <Label.FormattedText> -->
+    <!--             <FormattedString> -->
+    <!--                 <Span Text="All your brilliant thoughts" -->
+    <!--                       FontSize="14" -->
+    <!--                       TextColor="Gray"/> -->
+    <!--                 <Span Text=" Haha" -->
+    <!--                       FontSize="10" -->
+    <!--                       TextColor="HotPink"/> -->
+    <!--             </FormattedString> -->
+    <!--         </Label.FormattedText> -->
+    <!--     </Label> -->
+    <!--      -->
+    <!--     ~1~ Ideas ListView @1@ -->
+    <!--     <ListView x:Name="lstIdeas" -->
+    <!--               ItemsSource="{Binding}" -->
+    <!--               ItemSelected="LstIdeas_List"> -->
+    <!--         <ListView.ItemTemplate> -->
+    <!--             <DataTemplate> -->
+    <!--                 <TextCell Text="{Binding _Text}"  -->
+    <!--                           Detail="{Binding ID, StringFormat='Idea #{0}'}"/> -->
+    <!--             </DataTemplate> -->
+    <!--         </ListView.ItemTemplate> -->
+    <!--     </ListView> -->
+    <!--      -->
+    <!--     ~1~ Delete Button @1@ -->
+    <!--     <Button x:Name="btnDelete"  -->
+    <!--             Text="Delete Selected Idea" -->
+    <!--             BackgroundColor="Red" -->
+    <!--             TextColor="White" -->
+    <!--             CornerRadius="12" -->
+    <!--             HeightRequest="50" -->
+    <!--             Clicked="BtnDelete_OnClicked"/> -->
+    <!-- </VerticalStackLayout> -->
 </ContentPage>

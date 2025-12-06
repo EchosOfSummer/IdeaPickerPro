@@ -4,54 +4,176 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="IdeaPickerPro.Views.AddPage"
              Title="Add Idea">
-   
-    <ScrollView>
-        <VerticalStackLayout Padding="20" Spacing="20">
-            <!-- Header -->
-            <Label Text="Add Your Idea!"
-                   FontSize="28"
-                   FontAttributes="Bold"
-                   HorizontalOptions="Center" />
+   <Grid>
+       <BoxView BackgroundColor="#1a1a2e" />
+       <!-- Overlay for glitch effect -->
+       <BoxView x:Name="Layer1" BackgroundColor="#ff00fe" Opacity="0" />
+       <BoxView x:Name="Layer2" BackgroundColor="#8e2de2" Opacity="0" />
+       <BoxView x:Name="Layer3" BackgroundColor="#4a00e0" Opacity="0" />
+       <BoxView x:Name="Layer4" BackgroundColor="#00d2ff" Opacity="0" />
+       
+       
+       <Grid RowDefinitions="Auto,*">
+           <!-- Header with rounded corners -->
+           <Frame Grid.Row="0"
+                  Style="{StaticResource PageHeaderStyle}"
+                  HeightRequest="120">
+               <Grid Padding="20,40,20,20">
+                   <Label Text="Idea Picker"
+                          FontSize="24"
+                          FontAttributes="Bold"
+                          TextColor="LightPink"
+                          HorizontalOptions="Center"
+                          VerticalOptions="Center"/>
+               </Grid>
+           </Frame>
             
-            <Label Text="What brilliant thought do you have?"
-                   FontSize="14"
-                   TextColor="Gray"
-                   HorizontalOptions="Center" />
-            
-            <!-- Input Area -->
-            <Frame BackgroundColor="White"
-                   CornerRadius="12"
-                   Padding="15"
-                   HasShadow="True">
-                <Grid>
-                    <Entry x:Name="txtIdea"
-                           Placeholder="Type your idea here..."
-                           PlaceholderColor="#999"
-                           FontSize="16" />
-                </Grid>
-            </Frame>
-            
-            <!-- Action Buttons -->
-            <Button Text="Save Idea"
-                    x:Name="btnSave"
-                    FontSize="16"
-                    BackgroundColor="#4CAF50"
-                    TextColor="White"
-                    CornerRadius="12"
-                    HeightRequest="55"
-                    Clicked="BtnSave_OnClicked"/>
-            
-            <Button Text="Clear"
-                    x:Name="btnClear"
-                    FontSize="16"
-                    BackgroundColor="Transparent"
-                    TextColor="#666"
-                    BorderColor="#CCC"
-                    BorderWidth="1"
-                    CornerRadius="12"
-                    HeightRequest="45"
-                    Clicked="BtnClear_OnClicked"/>
-        </VerticalStackLayout>
-    </ScrollView>
+           <!-- Content box with infon -->
+           <Frame Grid.Row="1"
+                  Style="{StaticResource ContentBoxStyle}">
+               <VerticalStackLayout Spacing="15" VerticalOptions="Center">
+                   <Label Text="What brilliant thought do you have?"
+                          FontSize="14"
+                          TextColor="Gray"<Grid RowDefinitions="Auto,*">
+                                                     <!-- Header with rounded corners -->
+                                                     <Frame Grid.Row="0"
+                                                            Style="{StaticResource PageHeaderStyle}"
+                                                            HeightRequest="120">
+                                                         <Grid Padding="20,40,20,20">
+                                                             <Label Text="Idea Picker"
+                                                                    FontSize="24"
+                                                                    FontAttributes="Bold"
+                                                                    TextColor="LightPink"
+                                                                    HorizontalOptions="Center"
+                                                                    VerticalOptions="Center"/>
+                                                         </Grid>
+                                                     </Frame>
+                                                      
+                                                     <!-- Content box with infon -->
+                                                     <Frame Grid.Row="1"
+                                                            Style="{StaticResource ContentBoxStyle}">
+                                                         <VerticalStackLayout Spacing="15" VerticalOptions="Center">
+                                                             <Label Text="What brilliant thought do you have?"
+                                                                    FontSize="14"
+                                                                    TextColor="Gray"
+                                                                    HorizontalOptions="Center" />
+                                                             <Frame BackgroundColor="White"
+                                                                    CornerRadius="12"
+                                                                    Padding="15"
+                                                                    HasShadow="True">
+                                                                 <Grid>
+                                                                     <Entry x:Name="txtIdea"
+                                                                            Placeholder="Type your idea here..."
+                                                                            PlaceholderColor="#999"
+                                                                            FontSize="16"/>
+                                                                 </Grid>
+                                                             </Frame>
+                                                             
+                                                             <!-- button stuff -->
+                                                             <Button Text="Save Idea" 
+                                                                     x:Name="btnSave"
+                                                                     FontSize="16"
+                                                                     BackgroundColor="#4caf50"
+                                                                     TextColor="Firebrick"
+                                                                     CornerRadius="12"
+                                                                     HeightRequest="55"
+                                                                     Clicked="BtnSave_OnClicked"/>
+                                                             <Button Text="Clear"
+                                                                     x:Name="btnClear"
+                                                                     FontSize="16"
+                                                                     BackgroundColor="Transparent"
+                                                                     TextColor="#666"
+                                                                     BorderColor="#ccc"
+                                                                     BorderWidth="1" 
+                                                                     CornerRadius="12"
+                                                                     HeightRequest="45"
+                                                                     Clicked="BtnClear_OnClicked"/>
+                                                         </VerticalStackLayout>
+                                                     </Frame>
+                                                 </Grid>
+                          HorizontalOptions="Center" />
+                   <Frame BackgroundColor="White"
+                          CornerRadius="12"
+                          Padding="15"
+                          HasShadow="True">
+                       <Grid>
+                           <Entry x:Name="txtIdea"
+                                  Placeholder="Type your idea here..."
+                                  PlaceholderColor="#999"
+                                  FontSize="16"/>
+                       </Grid>
+                   </Frame>
+                   
+                   <!-- button stuff -->
+                   <Button Text="Save Idea" 
+                           x:Name="btnSave"
+                           FontSize="16"
+                           BackgroundColor="#4caf50"
+                           TextColor="Firebrick"
+                           CornerRadius="12"
+                           HeightRequest="55"
+                           Clicked="BtnSave_OnClicked"/>
+                   <Button Text="Clear"
+                           x:Name="btnClear"
+                           FontSize="16"
+                           BackgroundColor="Transparent"
+                           TextColor="#666"
+                           BorderColor="#ccc"
+                           BorderWidth="1" 
+                           CornerRadius="12"
+                           HeightRequest="45"
+                           Clicked="BtnClear_OnClicked"/>
+               </VerticalStackLayout>
+           </Frame>
+       </Grid>
+   </Grid>
+    <!-- <ScrollView> -->
+    <!--     <VerticalStackLayout Padding="20" Spacing="20"> -->
+    <!--         ~1~ Header @1@ -->
+    <!--         <Label Text="Add Your Idea!" -->
+    <!--                FontSize="28" -->
+    <!--                FontAttributes="Bold" -->
+    <!--                HorizontalOptions="Center" /> -->
+    <!--          -->
+    <!--         <Label Text="What brilliant thought do you have?" -->
+    <!--                FontSize="14" -->
+    <!--                TextColor="Gray" -->
+    <!--                HorizontalOptions="Center" /> -->
+    <!--          -->
+    <!--         ~1~ Input Area @1@ -->
+    <!--         <Frame BackgroundColor="White" -->
+    <!--                CornerRadius="12" -->
+    <!--                Padding="15" -->
+    <!--                HasShadow="True"> -->
+    <!--             <Grid> -->
+    <!--                 <Entry x:Name="txtIdea" -->
+    <!--                        Placeholder="Type your idea here..." -->
+    <!--                        PlaceholderColor="#999" -->
+    <!--                        FontSize="16" /> -->
+    <!--             </Grid> -->
+    <!--         </Frame> -->
+    <!--          -->
+    <!--         ~1~ Action Buttons @1@ -->
+    <!--         <Button Text="Save Idea" -->
+    <!--                 x:Name="btnSave" -->
+    <!--                 FontSize="16" -->
+    <!--                 BackgroundColor="#4CAF50" -->
+    <!--                 TextColor="White" -->
+    <!--                 CornerRadius="12" -->
+    <!--                 HeightRequest="55" -->
+    <!--                 Clicked="BtnSave_OnClicked"/> -->
+    <!--          -->
+    <!--         <Button Text="Clear" -->
+    <!--                 x:Name="btnClear" -->
+    <!--                 FontSize="16" -->
+    <!--                 BackgroundColor="Transparent" -->
+    <!--                 TextColor="#666" -->
+    <!--                 BorderColor="#CCC" -->
+    <!--                 BorderWidth="1" -->
+    <!--                 CornerRadius="12" -->
+    <!--                 HeightRequest="45" -->
+    <!--                 Clicked="BtnClear_OnClicked"/> -->
+    <!--     </VerticalStackLayout> -->
+    <!-- </ScrollView> -->
     
 </ContentPage>

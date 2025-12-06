@@ -15,13 +15,14 @@ public partial class AddPage : ContentPage
         InitializeComponent();
         _repository = new Repository();
         
-        var tbi = new ToolbarItem { Text = "About" };
-        ToolbarItems.Add(tbi);
-        tbi.Clicked += async (_, __) =>
-        {
-            if (Shell.Current.CurrentPage is AboutPage) return;
-            await Shell.Current.GoToAsync("AboutPage");
-        };
+        Glitch.StartGlitch(Layer1,Layer2,Layer3,Layer4);
+        // var tbi = new ToolbarItem { Text = "About" };
+        // ToolbarItems.Add(tbi);
+        // tbi.Clicked += async (_, __) =>
+        // {
+        //     if (Shell.Current.CurrentPage is AboutPage) return;
+        //     await Shell.Current.GoToAsync("AboutPage");
+        // };
     }
 
     private async void BtnSave_OnClicked(object sender, EventArgs e)
@@ -31,9 +32,7 @@ public partial class AddPage : ContentPage
         if (!string.IsNullOrEmpty(txtIdea.Text))
         {
             newIdea._Text = txtIdea.Text;
-            
             _repository.SaveIdea(newIdea);
-
             await DisplayAlert("Success", "Idea saved!", "OK");
             txtIdea.Text = "";
         }

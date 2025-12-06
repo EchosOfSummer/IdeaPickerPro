@@ -3,7 +3,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="IdeaPickerPro.Views.MainPage"
-             Background="#F5F5F5">
+             Title="Welcome!!">
     
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="About"
@@ -11,29 +11,78 @@
                      Order="Primary"
                      Priority="0"/>
     </ContentPage.ToolbarItems>
-       
-       <VerticalStackLayout Padding="20" Spacing="20" VerticalOptions="Center">
+    <Grid>
+        <BoxView BackgroundColor="#1a1a2e" />
+        <!-- Overlay for glitch effect -->
+        <BoxView x:Name="Layer1" BackgroundColor="#ff00fe" Opacity="0" />
+        <BoxView x:Name="Layer2" BackgroundColor="#8e2de2" Opacity="0" />
+        <BoxView x:Name="Layer3" BackgroundColor="#4a00e0" Opacity="0" />
+        <BoxView x:Name="Layer4" BackgroundColor="#00d2ff" Opacity="0" />
         
-              <Label Text="Welcome to Idea Picker Pro!"
-                     FontSize="24"
-                     FontAttributes="Bold"
-                     HorizontalOptions="Center"/>
-              <Label Text="Where do you want to go?"
-                     FontSize="18"
-                     HorizontalOptions="Center"/>
-        
-              <Button Text="Pick Random Idea"
-                      Clicked="btnRandomIdea"
-                      HeightRequest="60"
-                      FontSize="18"
-                      BackgroundColor="#FF9800"
-                      CornerRadius="12"/>
-        
-              <Label x:Name="lblRandIdea"
-                     Text=""
-                     FontSize="20"
-                     FontAttributes="Bold"
-                     HorizontalOptions="Center"
-                     TextColor="#9C27BB"/>
-       </VerticalStackLayout>
+        <Grid RowDefinitions="Auto,*">
+            <!-- Header with rounded corners -->
+            <Frame Grid.Row="0"
+                   Style="{StaticResource PageHeaderStyle}"
+                   HeightRequest="120">
+                <Grid Padding="20,40,20,20">
+                    <Label Text="Idea Picker"
+                           FontSize="24"
+                           FontAttributes="Bold"
+                           TextColor="HotPink"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"/>
+                </Grid>
+            </Frame>
+            
+            <!-- Content box with infon -->
+            <Frame Grid.Row="1"
+                   Style="{StaticResource ContentBoxStyle}">
+                <VerticalStackLayout Spacing="15" VerticalOptions="Center">
+                    <Label Text="Welcome to Idea Picker Pro!"
+                           FontSize="24"
+                           FontAttributes="Bold"
+                           HorizontalOptions="Center" />
+                    <Label Text="Where do you want to go?"
+                           FontSize="18"
+                           HorizontalOptions="Center" />
+                    <Button Text="Pick Random Idea" 
+                            Clicked="btnRandomIdea"
+                            HeightRequest="60"
+                            FontSize="18"
+                            BackgroundColor="#ff9800"
+                            CornerRadius="12" />
+                    <Label x:Name="lblRandIdea"
+                           Text=""
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           HorizontalOptions="Center" />
+                </VerticalStackLayout>
+            </Frame>
+        </Grid>
+    </Grid>
 </ContentPage>
+
+<!-- <VerticalStackLayout Padding="20" Spacing="20" VerticalOptions="Center"> -->
+<!--   -->
+<!--        <Label Text="Welcome to Idea Picker Pro!" -->
+<!--               FontSize="24" -->
+<!--               FontAttributes="Bold" -->
+<!--               HorizontalOptions="Center"/> -->
+<!--        <Label Text="Where do you want to go?" -->
+<!--               FontSize="18" -->
+<!--               HorizontalOptions="Center"/> -->
+<!--   -->
+<!--        <Button Text="Pick Random Idea" -->
+<!--                Clicked="btnRandomIdea" -->
+<!--                HeightRequest="60" -->
+<!--                FontSize="18" -->
+<!--                BackgroundColor="#FF9800" -->
+<!--                CornerRadius="12"/> -->
+<!--   -->
+<!--        <Label x:Name="lblRandIdea" -->
+<!--               Text="" -->
+<!--               FontSize="20" -->
+<!--               FontAttributes="Bold" -->
+<!--               HorizontalOptions="Center" -->
+<!--               TextColor="#9C27BB"/> -->
+<!-- </VerticalStackLayout> -->

@@ -14,6 +14,7 @@ public partial class MainPage : ContentPage
     {
         InitializeComponent();
         _repository = new Repository();
+        Glitch.StartGlitch(Layer1,Layer2,Layer3,Layer4);
     }
 
     private async void About(object sender, EventArgs e)

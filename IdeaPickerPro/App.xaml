@@ -5,10 +5,34 @@
              x:Class="IdeaPickerPro.App">
     <Application.Resources>
         <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
-                <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
-            </ResourceDictionary.MergedDictionaries>
+            
+            <!-- Colors -->
+            <Color x:Key="HeaderBaackground">#512DA8</Color>
+            <Color x:Key="ContentBoxBackground">#F5F5F5</Color>
+            <Color x:Key="TextPrimary">#212121</Color>
+            <Color x:Key="TextSecondary">#757575</Color>
+            <!-- Header Style -->
+            <Style x:Key="PageHeaderStyle" TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="{StaticResource ContentBoxBackground}" />
+                <Setter Property="CornerRadius" Value="20" />
+                <Setter Property="Padding" Value="30" />
+                <Setter Property="Margin" Value="20,40,20,20" />
+                <Setter Property="HasShadow" Value="True" />
+            </Style>
+            
+            <!-- Content Box Style -->
+            <Style x:Key="ContentBoxStyle" TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="{StaticResource ContentBoxBackground}" />
+                <Setter Property="CornerRadius" Value="20" />
+                <Setter Property="Padding" Value="30" />
+                <Setter Property="Margin" Value="20,40,20,20" />
+                <Setter Property="HasShadow" Value="True" />
+                
+            </Style>
+            <!-- <ResourceDictionary.MergedDictionaries> -->
+            <!--     <ResourceDictionary Source="Resources/Styles/Colors.xaml" /> -->
+            <!--     <ResourceDictionary Source="Resources/Styles/Styles.xaml" /> -->
+            <!-- </ResourceDictionary.MergedDictionaries> -->
         </ResourceDictionary>
     </Application.Resources>
 </Application>

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,19 +11,22 @@ namespace IdeaPickerPro.Views;
 public partial class IdeasPage : ContentPage
 {
     private readonly Repository _repository;
-    private Idea _selectedIdea;
+    //private Idea _selectedIdea;
+    private ObservableCollection<Idea> _ideas;
+    
     public IdeasPage()
     {
         InitializeComponent();
         _repository = new Repository();
+        Glitch.StartGlitch(Layer1,Layer2,Layer3,Layer4);
         
-        var tbi = new ToolbarItem { Text = "About" };
-        ToolbarItems.Add(tbi);
-        tbi.Clicked += async (_, __) =>
-        {
-            if (Shell.Current.CurrentPage is AboutPage) return;
-            await Shell.Current.GoToAsync("AboutPage");
-        };
+        // var tbi = new ToolbarItem { Text = "About" };
+        // ToolbarItems.Add(tbi);
+        // tbi.Clicked += async (_, __) =>
+        // {
+        //     if (Shell.Current.CurrentPage is AboutPage) return;
+        //     await Shell.Current.GoToAsync("AboutPage");
+        // };
     }
 
     protected override void OnAppearing()
