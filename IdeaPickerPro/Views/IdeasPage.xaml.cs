@@ -38,32 +38,37 @@ public partial class IdeasPage : ContentPage
     private void LoadIdeas()
     {
         var ideas = _repository.GetIdeas();
-        lstIdeas.ItemsSource = ideas;
+        IdeasCollectionView.ItemsSource = ideas;
+
+        Empty.IsVisible = ideas.Count == 0;
+        IdeasCollectionView.IsVisible = ideas.Count > 0;
     }
 
-
-    private void LstIdeas_List(object sender, SelectedItemChangedEventArgs e)
-    {
-        if (e.SelectedItem != null)
-        {
-            _selectedIdea = (Idea)e.SelectedItem;
-        }
-    }
+    // private void LstIdeas_List(object sender, SelectedItemChangedEventArgs e)
+    // {
+    //     if (e.SelectedItem != null)
+    //     {
+    //         _selectedIdea = (Idea)e.SelectedItem;
+    //     }
+    // }
 
     private async void BtnDelete_OnClicked(object sender, EventArgs e)
     {
-        if (_selectedIdea == null)
-        {
-            await DisplayAlert("Error", "Please select an idea first!", "OK");
-            return;
-        }
+        // if (_selectedIdea == null)
+        // {
+        //     await DisplayAlert("Error", "Please select an idea first!", "OK");
+        //     return;
+        // }
 
-        bool confirm = await DisplayAlert("Delete", $"Delete '{_selectedIdea._Text}'?", "Yes", "No");
+        var button = (Button)sender;
+        var idea = (Idea)button.BindingContext;
+        
+        bool confirm = await DisplayAlert("Delete", $"Delete '{idea._Text}'?", "Yes", "No");
 
         if (confirm)
         {
-            _repository.DeleteIdea(_selectedIdea.ID);
-            _selectedIdea = null;
+            //_repository.DeleteIdea(idea);
+            //_selectedIdea = null;
             LoadIdeas();
         }
     }

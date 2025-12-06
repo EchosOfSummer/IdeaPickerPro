@@ -37,33 +37,33 @@
                                    BackgroundColor="Transparent">
                        <CollectionView.ItemTemplate>
                            <DataTemplate>
-                               <SwipeView>
-                                   <SwipeView.RightItems>
-                                       <SwipeItem>
-                                           <SwipeItem Text="Delete"
-                                                      BackgroundColor="Red"
-                                                      Invoked="BtnDelete_OnClicked"/>
-                                       </SwipeItem>
-                                   </SwipeView.RightItems>
-                                   
-                                   <Frame Padding="15"
-                                          Margin="5"
-                                          BackgroundColor="White"
-                                          CornerRadius="10"
-                                          HasShadow="True">
-                                       <Grid ColumnDefinitions="*,Auto">
-                                           <Label Grid.Column="0" 
-                                                  Text="{Binding _Text}"
-                                                  FontSize="16"
-                                                  TextColor="DimGray"
-                                                  VerticalOptions="Center" />
-                                           <Label Grid.Column="1" 
-                                                  Text="???"
-                                                  FontSize="20"
-                                                  VerticalOptions="Center" />
-                                       </Grid>
-                                   </Frame>
-                               </SwipeView>
+                               <!-- <SwipeView> -->
+                               <!--     <SwipeView.RightItems> -->
+                               <!--         <SwipeItem> -->
+                               <!--             <SwipeItem Text="Delete" -->
+                               <!--                        BackgroundColor="Red" -->
+                               <!--                        Invoked="BtnDelete_OnClicked"/> -->
+                               <!--         </SwipeItem> -->
+                               <!--     </SwipeView.RightItems> -->
+                               <!--      -->
+                               <!--     <Frame Padding="15" -->
+                               <!--            Margin="5" -->
+                               <!--            BackgroundColor="White" -->
+                               <!--            CornerRadius="10" -->
+                               <!--            HasShadow="True"> -->
+                               <!--         <Grid ColumnDefinitions="*,Auto"> -->
+                               <!--             <Label Grid.Column="0"  -->
+                               <!--                    Text="{Binding _Text}" -->
+                               <!--                    FontSize="16" -->
+                               <!--                    TextColor="DimGray" -->
+                               <!--                    VerticalOptions="Center" /> -->
+                               <!--             <Label Grid.Column="1"  -->
+                               <!--                    Text="???" -->
+                               <!--                    FontSize="20" -->
+                               <!--                    VerticalOptions="Center" /> -->
+                               <!--         </Grid> -->
+                               <!--     </Frame> -->
+                               <!-- </SwipeView> -->
                            </DataTemplate>
                        </CollectionView.ItemTemplate>
                        

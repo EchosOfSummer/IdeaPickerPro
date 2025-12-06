@@ -7,7 +7,7 @@
         <ResourceDictionary>
             
             <!-- Colors -->
-            <Color x:Key="HeaderBaackground">#512DA8</Color>
+            <Color x:Key="HeaderBackground">#512DA8</Color>
             <Color x:Key="ContentBoxBackground">#F5F5F5</Color>
             <Color x:Key="TextPrimary">#212121</Color>
             <Color x:Key="TextSecondary">#757575</Color>
