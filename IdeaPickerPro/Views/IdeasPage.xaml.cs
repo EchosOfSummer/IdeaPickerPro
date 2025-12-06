@@ -67,7 +67,8 @@ public partial class IdeasPage : ContentPage
 
         if (confirm)
         {
-            //_repository.DeleteIdea(idea);
+            //_repository.DeleteIdea(Idea);
+            _repository.DeleteIdea(idea.ID);
             //_selectedIdea = null;
             LoadIdeas();
         }

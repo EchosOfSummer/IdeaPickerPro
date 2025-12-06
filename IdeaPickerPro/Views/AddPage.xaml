@@ -18,7 +18,7 @@
            <Frame Grid.Row="0"
                   Style="{StaticResource PageHeaderStyle}"
                   HeightRequest="120">
-               <Grid Padding="20,40,20,20">
+               <Grid Padding="20,20,20,20">
                    <Label Text="Idea Picker"
                           FontSize="24"
                           FontAttributes="Bold"

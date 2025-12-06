@@ -18,7 +18,7 @@
            <Frame Grid.Row="0"
                   Style="{StaticResource PageHeaderStyle}"
                   HeightRequest="120">
-               <Grid Padding="20,40,20,20">
+               <Grid Padding="20,20,20,20">
                    <Label Text="All Ideas"
                           FontSize="24"
                           FontAttributes="Bold"
@@ -37,33 +37,28 @@
                                    BackgroundColor="Transparent">
                        <CollectionView.ItemTemplate>
                            <DataTemplate>
-                               <!-- <SwipeView> -->
-                               <!--     <SwipeView.RightItems> -->
-                               <!--         <SwipeItem> -->
-                               <!--             <SwipeItem Text="Delete" -->
-                               <!--                        BackgroundColor="Red" -->
-                               <!--                        Invoked="BtnDelete_OnClicked"/> -->
-                               <!--         </SwipeItem> -->
-                               <!--     </SwipeView.RightItems> -->
-                               <!--      -->
-                               <!--     <Frame Padding="15" -->
-                               <!--            Margin="5" -->
-                               <!--            BackgroundColor="White" -->
-                               <!--            CornerRadius="10" -->
-                               <!--            HasShadow="True"> -->
-                               <!--         <Grid ColumnDefinitions="*,Auto"> -->
-                               <!--             <Label Grid.Column="0"  -->
-                               <!--                    Text="{Binding _Text}" -->
-                               <!--                    FontSize="16" -->
-                               <!--                    TextColor="DimGray" -->
-                               <!--                    VerticalOptions="Center" /> -->
-                               <!--             <Label Grid.Column="1"  -->
-                               <!--                    Text="???" -->
-                               <!--                    FontSize="20" -->
-                               <!--                    VerticalOptions="Center" /> -->
-                               <!--         </Grid> -->
-                               <!--     </Frame> -->
-                               <!-- </SwipeView> -->
+                               <Frame Padding="15"
+                                      Margin="5"
+                                      BackgroundColor="Chartreuse"
+                                      CornerRadius="10"
+                                      HasShadow="True">
+                                   <Grid ColumnDefinitions="*,Auto">
+                                       <Label Grid.Column="0"
+                                              Text="{Binding _Text}"
+                                              FontSize="16"
+                                              TextColor="Crimson"
+                                              VerticalOptions="Center"/>
+                                       <Button Grid.Column="1"
+                                               Text="XX"
+                                               FontSize="16"
+                                               BackgroundColor="Red"
+                                               TextColor="Aquamarine"
+                                               CornerRadius="15"
+                                               HeightRequest="30"
+                                               WidthRequest="30"
+                                               Clicked="BtnDelete_OnClicked"/>
+                                   </Grid>
+                               </Frame>
                            </DataTemplate>
                        </CollectionView.ItemTemplate>
                        

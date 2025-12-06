@@ -19,7 +19,7 @@
             <Frame Grid.Row="0"
                    Style="{StaticResource PageHeaderStyle}"
                    HeightRequest="120">
-                <Grid Padding="20,40,20,20">
+                <Grid Padding="20,20,20,20">
                     <Label Text="About"
                            FontSize="24"
                            FontAttributes="Bold"
@@ -40,7 +40,7 @@
                            FontSize="24"
                            FontAttributes="Bold"
                            HorizontalTextAlignment="Center" />
-                    <Label Text="Version #0.1.5"
+                    <Label Text="Version #1.1.1"
                            FontSize="16"
                            HorizontalTextAlignment="Center"/>
                 </VerticalStackLayout>
