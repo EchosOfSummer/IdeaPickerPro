@@ -16,6 +16,7 @@ public partial class AddPage : ContentPage
         _repository = new Repository();
         
         Glitch.StartGlitch(Layer1,Layer2,Layer3,Layer4);
+        //Glitch.StartNew();
         // var tbi = new ToolbarItem { Text = "About" };
         // ToolbarItems.Add(tbi);
         // tbi.Clicked += async (_, __) =>

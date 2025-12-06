@@ -1,4 +1,5 @@
 ﻿using IdeaPickerPro.Views;
+using IdeaPickerPro.Models;
 
 namespace IdeaPickerPro;
 
@@ -59,5 +60,6 @@ public partial class App : Application
         };
         Routing.RegisterRoute("AboutPage", typeof(AboutPage));
         MainPage = shell;
+        Glitch.StartNew();
     }
 }
