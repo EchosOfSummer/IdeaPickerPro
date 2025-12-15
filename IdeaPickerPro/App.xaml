@@ -7,13 +7,21 @@
         <ResourceDictionary>
             
             <!-- Colors -->
-            <Color x:Key="HeaderBackground">#512DA8</Color>
-            <Color x:Key="ContentBoxBackground">#F5F5F5</Color>
-            <Color x:Key="TextPrimary">#212121</Color>
-            <Color x:Key="TextSecondary">#757575</Color>
+            <!-- <Color x:Key="HeaderBackground">#512DA8</Color> -->
+            <!-- <Color x:Key="ContentBoxBackground">#F5F5F5</Color> -->
+            <!-- <Color x:Key="TextPrimary">#212121</Color> -->
+            <!-- <Color x:Key="TextSecondary">#757575</Color> -->
+            
+            <RadialGradientBrush x:Key="HeaderRadialGradient" Center="0.5,0.5" Radius="0.8">
+                <GradientStop Color="Black" Offset="0.1" />
+                <GradientStop Color="Black" Offset="0.2" />
+                <GradientStop Color="#00ff2f" Offset="0.5" />
+                <GradientStop Color="#2d5a3d" Offset="0.7" />
+                <GradientStop Color="Black" Offset="1.0" />
+            </RadialGradientBrush>
             <!-- Header Style -->
             <Style x:Key="PageHeaderStyle" TargetType="Frame">
-                <Setter Property="BackgroundColor" Value="{StaticResource ContentBoxBackground}" />
+                <Setter Property="Background" Value="{StaticResource HeaderRadialGradient}" />
                 <Setter Property="CornerRadius" Value="20" />
                 <Setter Property="Padding" Value="30" />
                 <Setter Property="Margin" Value="20,40,20,20" />
@@ -22,7 +30,7 @@
             
             <!-- Content Box Style -->
             <Style x:Key="ContentBoxStyle" TargetType="Frame">
-                <Setter Property="BackgroundColor" Value="{StaticResource ContentBoxBackground}" />
+                <Setter Property="Background" Value="{StaticResource HeaderRadialGradient}" />
                 <Setter Property="CornerRadius" Value="20" />
                 <Setter Property="Padding" Value="30" />
                 <Setter Property="Margin" Value="20,40,20,20" />

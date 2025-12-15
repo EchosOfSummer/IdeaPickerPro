@@ -41,19 +41,22 @@
                     <Label Text="Welcome to Idea Picker Pro!"
                            FontSize="24"
                            FontAttributes="Bold"
+                           TextColor="HotPink"
                            HorizontalOptions="Center" />
                     <Label Text="Where do you want to go?"
                            FontSize="18"
+                           TextColor="WhiteSmoke"
                            HorizontalOptions="Center" />
                     <Button Text="Pick Random Idea" 
                             Clicked="btnRandomIdea"
                             HeightRequest="60"
                             FontSize="18"
-                            BackgroundColor="#ff9800"
+                            BackgroundColor="green"
                             CornerRadius="12" />
                     <Label x:Name="lblRandIdea"
                            Text=""
                            FontSize="20"
+                           TextColor="HotPink"
                            FontAttributes="Bold"
                            HorizontalOptions="Center" />
                 </VerticalStackLayout>
