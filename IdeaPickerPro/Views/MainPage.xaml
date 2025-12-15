@@ -4,6 +4,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="IdeaPickerPro.Views.MainPage"
              Title="Welcome!!">
+             
+             <!-- BackgroundColor="Black"> -->
     
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="About"
@@ -45,12 +47,15 @@
                            HorizontalOptions="Center" />
                     <Label Text="Where do you want to go?"
                            FontSize="18"
-                           TextColor="WhiteSmoke"
+                           TextColor="MediumPurple"
+                           TextDecorations="Underline"
                            HorizontalOptions="Center" />
                     <Button Text="Pick Random Idea" 
                             Clicked="btnRandomIdea"
                             HeightRequest="60"
                             FontSize="18"
+                            FontAttributes="Bold"
+                            TextColor="Black"
                             BackgroundColor="green"
                             CornerRadius="12" />
                     <Label x:Name="lblRandIdea"

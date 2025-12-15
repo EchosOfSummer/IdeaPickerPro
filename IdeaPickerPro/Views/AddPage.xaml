@@ -22,7 +22,7 @@
                    <Label Text="Idea Picker"
                           FontSize="24"
                           FontAttributes="Bold"
-                          TextColor="LightPink"
+                          TextColor="HotPink"
                           HorizontalOptions="Center"
                           VerticalOptions="Center"/>
                </Grid>
@@ -33,8 +33,9 @@
                   Style="{StaticResource ContentBoxStyle}">
                <VerticalStackLayout Spacing="15" VerticalOptions="Center">
                    <Label Text="What brilliant thought do you have?"
-                          FontSize="14"
-                          TextColor="Gray"
+                          FontSize="22"
+                          FontAttributes="Bold"
+                          TextColor="HotPink"
                           HorizontalOptions="Center" />
                    <Frame BackgroundColor="White"
                           CornerRadius="12"
@@ -43,7 +44,7 @@
                        <Grid>
                            <Entry x:Name="txtIdea"
                                   Placeholder="Type your idea here..."
-                                  PlaceholderColor="#999"
+                                  PlaceholderColor="HotPink"
                                   FontSize="16"/>
                        </Grid>
                    </Frame>
@@ -52,8 +53,9 @@
                    <Button Text="Save Idea" 
                            x:Name="btnSave"
                            FontSize="16"
-                           BackgroundColor="#4caf50"
-                           TextColor="Firebrick"
+                           FontAttributes="Bold"
+                           BackgroundColor="Green"
+                           TextColor="Blue"
                            CornerRadius="12"
                            HeightRequest="55"
                            Clicked="BtnSave_OnClicked"/>
@@ -61,7 +63,7 @@
                            x:Name="btnClear"
                            FontSize="16"
                            BackgroundColor="Transparent"
-                           TextColor="#666"
+                           TextColor="Blue"
                            BorderColor="#ccc"
                            BorderWidth="1" 
                            CornerRadius="12"
