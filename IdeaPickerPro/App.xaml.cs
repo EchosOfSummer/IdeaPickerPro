@@ -60,6 +60,6 @@ public partial class App : Application
         };
         Routing.RegisterRoute("AboutPage", typeof(AboutPage));
         MainPage = shell;
-        Glitch.StartNew();
+        //Glitch.StartNew();
     }
 }

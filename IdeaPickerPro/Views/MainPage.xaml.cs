@@ -23,11 +23,11 @@ public partial class MainPage : ContentPage
         if (Shell.Current.CurrentPage is AboutPage) return;
         await Shell.Current.GoToAsync("AboutPage");
         
-        Device.BeginInvokeOnMainThread(async () =>
-        {
-            await Task.Delay(200);
-            Glitch.StartNew();
-        });
+        // Device.BeginInvokeOnMainThread(async () =>
+        // {
+        //     await Task.Delay(200);
+        //     Glitch.StartNew();
+        // });
     }
 
     private void btnRandomIdea(object sender, EventArgs e)
