@@ -7,12 +7,13 @@
     
     <Grid>
         <!-- Base  background -->
-        <BoxView BackgroundColor="#1a1a2e" />
+        <BoxView BackgroundColor="#0a0a0a" />
         <!-- Overlay for glitch effect -->
-        <BoxView x:Name="Layer1" BackgroundColor="#ff00fe" Opacity="0" />
-        <BoxView x:Name="Layer2" BackgroundColor="#8e2de2" Opacity="0" />
-        <BoxView x:Name="Layer3" BackgroundColor="#4a00e0" Opacity="0" />
-        <BoxView x:Name="Layer4" BackgroundColor="#00d2ff" Opacity="0" />
+        <BoxView x:Name="Layer1" BackgroundColor="#000000" Opacity="0" />
+        <BoxView x:Name="Layer2" BackgroundColor="#cc0000" Opacity="0" />
+        <BoxView x:Name="Layer3" BackgroundColor="#000000" Opacity="0" />
+        <BoxView x:Name="Layer4" BackgroundColor="#ff0066" Opacity="0" />
+        
         
         <Grid RowDefinitions="Auto,*">
             <!-- Header with rounded corners -->
@@ -35,13 +36,16 @@
                 <VerticalStackLayout Spacing="15" VerticalOptions="Center">
                     <Label Text="Author: Neebin Buswa"
                            FontSize="18"
+                           TextColor="HotPink"
                            HorizontalTextAlignment="Center" />
                     <Label Text="App: IdeaPickerPro"
                            FontSize="24"
+                           TextColor="HotPink"
                            FontAttributes="Bold"
                            HorizontalTextAlignment="Center" />
-                    <Label Text="Version #1.1.1"
+                    <Label Text="Version #1.9.1"
                            FontSize="16"
+                           TextColor="HotPink"
                            HorizontalTextAlignment="Center"/>
                 </VerticalStackLayout>
             </Frame>

@@ -5,12 +5,12 @@
              x:Class="IdeaPickerPro.Views.AddPage"
              Title="Add Idea">
    <Grid>
-       <BoxView BackgroundColor="#1a1a2e" />
+       <BoxView BackgroundColor="#0a0a0a" />
        <!-- Overlay for glitch effect -->
-       <BoxView x:Name="Layer1" BackgroundColor="#ff00fe" Opacity="0" />
-       <BoxView x:Name="Layer2" BackgroundColor="#8e2de2" Opacity="0" />
-       <BoxView x:Name="Layer3" BackgroundColor="#4a00e0" Opacity="0" />
-       <BoxView x:Name="Layer4" BackgroundColor="#00d2ff" Opacity="0" />
+       <BoxView x:Name="Layer1" BackgroundColor="#000000" Opacity="0" />
+       <BoxView x:Name="Layer2" BackgroundColor="#cc0000" Opacity="0" />
+       <BoxView x:Name="Layer3" BackgroundColor="#000000" Opacity="0" />
+       <BoxView x:Name="Layer4" BackgroundColor="#ff0066" Opacity="0" />
        
        
        <Grid RowDefinitions="Auto,*">
