@@ -32,7 +32,7 @@
             <!-- Content Box Style -->
             <Style x:Key="ContentBoxStyle" TargetType="Frame">
                 <Setter Property="Background" Value="{StaticResource HeaderRadialGradient}" />
-                <Setter Property="CornerRadius" Value="150" />
+                <Setter Property="CornerRadius" Value="30" />
                 <Setter Property="Padding" Value="30" />
                 <Setter Property="Margin" Value="20,40,20,20" />
                 <Setter Property="HasShadow" Value="True" />
