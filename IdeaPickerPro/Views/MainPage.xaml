@@ -14,12 +14,12 @@
     <!--                  Priority="0"/> -->
     <!-- </ContentPage.ToolbarItems> -->
     <Grid>
-        <BoxView BackgroundColor="#0a0a0a" />
+        <BoxView BackgroundColor="DarkBlue" />
         <!-- Overlay for glitch effect -->
-        <BoxView x:Name="Layer1" BackgroundColor="#000000" Opacity="0" />
-        <BoxView x:Name="Layer2" BackgroundColor="#cc0000" Opacity="0" />
-        <BoxView x:Name="Layer3" BackgroundColor="#000000" Opacity="0" />
-        <BoxView x:Name="Layer4" BackgroundColor="#ff0066" Opacity="0" />
+        <BoxView x:Name="Layer1" BackgroundColor="DarkCyan" Opacity="0" />
+        <BoxView x:Name="Layer2" BackgroundColor="Red" Opacity="0" />
+        <BoxView x:Name="Layer3" BackgroundColor="LightCyan" Opacity="0" />
+        <BoxView x:Name="Layer4" BackgroundColor="Pink" Opacity="0" />
         
         <Grid RowDefinitions="Auto,*">
             <!-- Header with rounded corners -->
@@ -30,7 +30,7 @@
                     <Label Text="Idea Picker"
                            FontSize="24"
                            FontAttributes="Bold"
-                           TextColor="HotPink"
+                           TextColor="GreenYellow"
                            HorizontalOptions="Center"
                            VerticalOptions="Center"/>
                 </Grid>
@@ -43,11 +43,12 @@
                     <Label Text="Welcome to Idea Picker Pro!"
                            FontSize="24"
                            FontAttributes="Bold"
-                           TextColor="HotPink"
+                           TextColor="GreenYellow"
                            HorizontalOptions="Center" />
                     <Label Text="Where do you want to go?"
                            FontSize="18"
-                           TextColor="MediumPurple"
+                           FontAttributes="Bold"
+                           TextColor="GreenYellow"
                            TextDecorations="Underline"
                            HorizontalOptions="Center" />
                     <Button Text="Pick Random Idea" 
@@ -55,13 +56,13 @@
                             HeightRequest="60"
                             FontSize="18"
                             FontAttributes="Bold"
-                            TextColor="Black"
+                            TextColor="GreenYellow"
                             BackgroundColor="green"
                             CornerRadius="12" />
                     <Label x:Name="lblRandIdea"
                            Text=""
                            FontSize="20"
-                           TextColor="HotPink"
+                           TextColor="GreenYellow"
                            FontAttributes="Bold"
                            HorizontalOptions="Center" />
                 </VerticalStackLayout>

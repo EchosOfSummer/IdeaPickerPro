@@ -26,10 +26,8 @@ public static class Glitch
     {
         var colors = new[]
         {
-            "#FF006E","#8e2de2","#4a0080","#00d2ff","#ff0080",
-            "#7928ca","#fa709a","#fdbb2d","#ff416c","#667eea",
-            "#764ba2","#f093fb","#4facfe","#00f2fe","#fa709a",
-            "#fee140","#43e97b","#38f9d7","#5ee7df","#66a6ff"
+            "#ff0000","#ff0066","#cc0000",
+            "#ff1493","#ff1744","#8b0000"
         };
         var random = new Random();
 

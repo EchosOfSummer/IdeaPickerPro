@@ -5,12 +5,12 @@
              x:Class="IdeaPickerPro.Views.AddPage"
              Title="Add Idea">
    <Grid>
-       <BoxView BackgroundColor="#0a0a0a" />
+       <BoxView BackgroundColor="DarkBlue" />
        <!-- Overlay for glitch effect -->
-       <BoxView x:Name="Layer1" BackgroundColor="#000000" Opacity="0" />
-       <BoxView x:Name="Layer2" BackgroundColor="#cc0000" Opacity="0" />
-       <BoxView x:Name="Layer3" BackgroundColor="#000000" Opacity="0" />
-       <BoxView x:Name="Layer4" BackgroundColor="#ff0066" Opacity="0" />
+       <BoxView x:Name="Layer1" BackgroundColor="DarkCyan" Opacity="0" />
+       <BoxView x:Name="Layer2" BackgroundColor="Red" Opacity="0" />
+       <BoxView x:Name="Layer3" BackgroundColor="LightCyan" Opacity="0" />
+       <BoxView x:Name="Layer4" BackgroundColor="Pink" Opacity="0" />
        
        
        <Grid RowDefinitions="Auto,*">
@@ -22,7 +22,7 @@
                    <Label Text="Idea Picker"
                           FontSize="24"
                           FontAttributes="Bold"
-                          TextColor="HotPink"
+                          TextColor="GreenYellow"
                           HorizontalOptions="Center"
                           VerticalOptions="Center"/>
                </Grid>
@@ -35,16 +35,16 @@
                    <Label Text="What brilliant thought do you have?"
                           FontSize="22"
                           FontAttributes="Bold"
-                          TextColor="HotPink"
+                          TextColor="GreenYellow"
                           HorizontalOptions="Center" />
-                   <Frame BackgroundColor="White"
+                   <Frame BackgroundColor="LightGray"
                           CornerRadius="12"
                           Padding="15"
                           HasShadow="True">
                        <Grid>
                            <Entry x:Name="txtIdea"
                                   Placeholder="Type your idea here..."
-                                  PlaceholderColor="HotPink"
+                                  PlaceholderColor="Gray"
                                   FontSize="16"/>
                        </Grid>
                    </Frame>
@@ -55,7 +55,7 @@
                            FontSize="16"
                            FontAttributes="Bold"
                            BackgroundColor="Green"
-                           TextColor="Blue"
+                           TextColor="GreenYellow"
                            CornerRadius="12"
                            HeightRequest="55"
                            Clicked="BtnSave_OnClicked"/>
@@ -63,7 +63,7 @@
                            x:Name="btnClear"
                            FontSize="16"
                            BackgroundColor="Transparent"
-                           TextColor="Blue"
+                           TextColor="GreenYellow"
                            BorderColor="#ccc"
                            BorderWidth="1" 
                            CornerRadius="12"

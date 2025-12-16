@@ -72,9 +72,9 @@ public partial class App : Application
         MainPage = shell;
         Glitch.StartNew();
         
-        Shell.Current.Navigated += (sender, e) =>
-        {
-            Glitch.StartNew();
-        };
+        // Shell.Current.Navigated += (sender, e) =>
+        // {
+        //     Glitch.StartNew();
+        // };
     }
 }

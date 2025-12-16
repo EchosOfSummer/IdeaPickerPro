@@ -30,13 +30,15 @@ public partial class MainPage : ContentPage
     //     // });
     // }
 
-    private void btnRandomIdea(object sender, EventArgs e)
+    private async void btnRandomIdea(object sender, EventArgs e)
     {
         var ideas = _repository.GetIdeas();
 
         if (ideas.Count == 0)
         {
             lblRandIdea.Text = "No ideas yet! Add some first";
+            await Task.Delay(3000);
+            lblRandIdea.Text = "";
             return;
         }
 
