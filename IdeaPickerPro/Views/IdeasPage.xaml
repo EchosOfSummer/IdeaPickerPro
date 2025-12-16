@@ -68,7 +68,7 @@
                    <VerticalStackLayout x:Name="Empty"
                                         VerticalOptions="Center"
                                         HorizontalOptions="Center"
-                                        IsVisible="True">
+                                        IsVisible="False">
                        <Label Text="????"
                               FontSize="50"
                               TextColor="Aquamarine"

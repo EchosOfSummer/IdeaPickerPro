@@ -18,17 +18,17 @@ public partial class MainPage : ContentPage
         //Glitch.StartNew();
     }
 
-    private async void About(object sender, EventArgs e)
-    {
-        if (Shell.Current.CurrentPage is AboutPage) return;
-        await Shell.Current.GoToAsync("AboutPage");
-        
-        // Device.BeginInvokeOnMainThread(async () =>
-        // {
-        //     await Task.Delay(200);
-        //     Glitch.StartNew();
-        // });
-    }
+    // private async void About(object sender, EventArgs e)
+    // {
+    //     if (Shell.Current.CurrentPage is AboutPage) return;
+    //     await Shell.Current.GoToAsync("AboutPage");
+    //     
+    //     // Device.BeginInvokeOnMainThread(async () =>
+    //     // {
+    //     //     await Task.Delay(200);
+    //     //     Glitch.StartNew();
+    //     // });
+    // }
 
     private void btnRandomIdea(object sender, EventArgs e)
     {
@@ -36,7 +36,7 @@ public partial class MainPage : ContentPage
 
         if (ideas.Count == 0)
         {
-            lblRandIdea.Text = "Nod ideas yet! Add some first";
+            lblRandIdea.Text = "No ideas yet! Add some first";
             return;
         }
 

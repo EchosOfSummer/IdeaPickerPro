@@ -6,13 +6,13 @@
              Title="Welcome!!">
              
              <!-- BackgroundColor="Black"> -->
-    
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Text="About"
-                     Clicked="About"
-                     Order="Primary"
-                     Priority="0"/>
-    </ContentPage.ToolbarItems>
+    <!-- -->
+    <!-- <ContentPage.ToolbarItems> -->
+    <!--     <ToolbarItem Text="About" -->
+    <!--                  Clicked="About" -->
+    <!--                  Order="Primary" -->
+    <!--                  Priority="0"/> -->
+    <!-- </ContentPage.ToolbarItems> -->
     <Grid>
         <BoxView BackgroundColor="#1a1a2e" />
         <!-- Overlay for glitch effect -->

@@ -1,4 +1,5 @@
-﻿using IdeaPickerPro.Views;
+﻿
+using IdeaPickerPro.Views;
 using IdeaPickerPro.Models;
 
 namespace IdeaPickerPro;
@@ -27,9 +28,7 @@ public partial class App : Application
                                 {
                                     Route = "MainPage",
                                     ContentTemplate = new DataTemplate(() => new MainPage())
-                                }
-                            }
-                        },
+                                }}},
                         new Tab
                         {
                             Title = "Add An Idea",
@@ -40,9 +39,7 @@ public partial class App : Application
                                 {
                                     Route = "AddPage",
                                     ContentTemplate = new DataTemplate(() => new AddPage())
-                                }
-                            }
-                        },
+                                }}},
                         new Tab
                         {
                             Title = "Ideas",
@@ -53,13 +50,31 @@ public partial class App : Application
                                 {
                                     Route = "IdeasPage",
                                     ContentTemplate = new DataTemplate(() => new IdeasPage())
-                                }}}
+                                }}},
+                        new Tab
+                        {
+                            Title = "About",
+                            Icon = "",
+                            Items =
+                            {
+                                new ShellContent()
+                                {
+                                    Route = "AboutPage",
+                                    ContentTemplate = new DataTemplate(() => new AboutPage())
+                                }
+                            }
+                        }
                     }
                 }
             }
         };
-        Routing.RegisterRoute("AboutPage", typeof(AboutPage));
+        // Routing.RegisterRoute("AboutPage", typeof(AboutPage));
         MainPage = shell;
-        //Glitch.StartNew();
+        Glitch.StartNew();
+        
+        Shell.Current.Navigated += (sender, e) =>
+        {
+            Glitch.StartNew();
+        };
     }
 }
