@@ -46,5 +46,7 @@ public partial class MainPage : ContentPage
         var randomIdea = ideas[random.Next(ideas.Count)];
 
         lblRandIdea.Text = $"{randomIdea._Text}";
+        await Task.Delay(3000);
+        lblRandIdea.Text = "";
     }
 }
